@@ -1,0 +1,90 @@
+* { /* Selector universal */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /*que el ancho abarque el paddig y el borde*/
+}
+
+body {
+    background: rgb(244, 212, 160);
+    font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 { /* Selectores tipo directo */
+    text-align: left;
+    text-shadow: rgb(101, 66, 54);
+    text-decoration: underline;
+    color: rgb(84, 45, 40);
+    padding-top: 25px;
+}
+
+h3 {
+    padding: 20px 20px 20px;
+}
+ 
+.logo{
+    width: 150px;
+    height: 80px;
+    float: left;
+    padding: 8px;
+}
+/* img {
+    width: 200px;
+} */
+
+.menu {
+    width: 900px;
+    margin: 0 auto; /*centrado */
+}
+
+header { /* Selectores tipo directo */
+    background: rgb(218, 118, 53);
+    width: 100%;
+    clear: both;
+    content: ''; 
+    display: table;
+}
+
+nav {
+    float: right;
+}
+
+nav ul li {
+    list-style: none;
+    margin-left: 20px;
+    padding: 25px;
+    padding-right: 100px;
+    float: left;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(101, 66, 54);
+    font-weight: bold;
+
+}
+
+.banner { /* Selectores tipo clase*/
+    height: 300px;
+    background-image: url('./assets/img/cocina-integral-banner.jpeg');
+    background-size: contain;
+    background-attachment: fixed;
+}
+
+#parrafo-mision { /* Selectores tipo ID */
+    text-align: justify;
+    color: rgb(84, 45, 40);
+    font-family: 'Bree Serif', serif;
+    font-size: larger;
+    padding-left: 10px;
+
+}
+
+.espacio-div {
+    padding-bottom: 25px;
+}
+
+/*  */
