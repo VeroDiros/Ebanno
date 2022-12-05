@@ -13,43 +13,56 @@
 </head>
 <body>
     <header>
-        <nav> <!--BARRA DE NAVEGACIÓN-->
-            <ul>
-                <li>
-                    <a href="./index.html">Inicio</a>
-                </li>
-                <li>
-                    <a href="./quienes-somos.html">¿Quiénes somos?</a>
-                </li>
-                <li>
-                    <a href="./productos.html">Productos</a>
-                </li>
-                <li>
-                    <a href="./contacto.html">Contacto</a>
-                </li>
-            </ul>
-        </nav>
-        <div>
-            <img class="logo" src="./assets/img/logo.png" alt="Logo" height="100" width="100">
-        </div>
+        <div class="contenedor-nav">
+            <img class="logo" src="./assets/img/logo-ebanno.png" alt="Logo" height="100" width="100">  <!--LOGO-->
+            <nav> <!--BARRA DE NAVEGACIÓN-->
+                <ul class="contenedor-ul">
+                    <li>
+                        <a href="./index.html">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="./quienes-somos.html">¿Quiénes somos?</a>
+                    </li>
+                    <li>
+                        <a href="./productos.html">Productos</a>
+                    </li>
+                    <li>
+                        <a href="./contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+                <div class="input-buscar">
+                    <input type="text" name="" id="" placeholder="Buscar">
+                    <button  type="submit"><img class="icon-buscar" src="./assets/img/lupa.png" alt="buscar" /></button>
+                </div>
+                <img class="carrito" src="./assets/img/carrito-vacio.png" alt="carrito" height="100" width="100">
+        </div> 
     </header>
     <main>
+        <section>
+            <h2> ¿Dónde nos ubicamos? </h2> 
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15092.495474889556!2d-98.2103726!3d18.97013615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2smx!4v1668652334789!5m2!1ses!2smx" width="1800" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
         <!-- <aside> -->
+        <section>
             <h2>¿Quién es Ebanno?</h2>
             <div class="espacio-div">
                 <h3>Misión</h3>
-                <p id="parrafo-mision">
+                <p class="parrafo-mision">
                     Ebanno es una empresa familiar Michoacana dedicada a la fabricación y venta de productos y artesanías utilizando en su mayoría como material base la madera. 
                     Nuestro objetivo de hacer llegar a nuestros clientes muebles, artesanías y cocinas integrales de buena calidad, con la opción de hacerlos a la medida.
                     Esto permite a nuestros clientes poder personalizar los interiores de su casa además de facilitar la actividades comunes de su hogar.
                 </p>
             </div>
-            <h3>Visión</h3>
-                <p>
-                    Ebanno quiere lograr que todas las personas tengan acceso a muebles, artesanias y cocinas integrales de buena calidad, se desea que 
-                    cualquier persona tenga acceso a mejorar y personalizar uno de los lugares más importantes de nuestras vidas: aquel lugar donde descansará,
-                    crecerá y permanecerá gran parte del tiempo: su hogar.
-                </p>
+            </section>
+            <section>
+                <h3>Visión</h3>
+                    <p class="parrafo-mision">
+                        Ebanno quiere lograr que todas las personas tengan acceso a muebles, artesanias y cocinas integrales de buena calidad, se desea que 
+                        cualquier persona tenga acceso a mejorar y personalizar uno de los lugares más importantes de nuestras vidas: aquel lugar donde descansará,
+                        crecerá y permanecerá gran parte del tiempo: su hogar.
+                    </p>
+            </section>
             <!-- <h3>Valores</h3>
                 <P>
                     Para Ebanno la satisfacción del cliente es lo más importante, dentro de la empres
@@ -57,13 +70,7 @@
 
             <!-- <img src="https://media.glamour.mx/photos/61908489a6e030d6480fc2a6/3:2/w_2361,h_1574,c_limit/204223.jpg" alt="comida" height="1000"> -->
         </aside>
-        <!-- <aside>
-            <h2>¿Es tu primera vez en Puebla?</h2>
-            <h3>
-                Prueba nuesto mole poblano y nuestros chiles en nogada. ¡Conoce la historia de ellos!
-            </h3>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/Ll9iyA2A7fk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </aside> -->
+        
     </main>
 </body>
 </html>

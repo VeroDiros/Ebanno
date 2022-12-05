@@ -9,16 +9,59 @@ body {
     font-family: 'Raleway', sans-serif;
 }
 
-h1 {
+h1 { /* Selectores tipo directo */
     text-align: center;
+    margin: 30px;
 }
 
-h2 { /* Selectores tipo directo */
-    text-align: left;
-    text-shadow: rgb(101, 66, 54);
-    text-decoration: underline;
+/* .banner { /* Selectores tipo clase
+    height: 300px;
+    background-image: url('./assets/img/cocina-integral-banner.jpeg');
+    background-size: 1500px;
+    border: 2px solid rgb(101, 66, 54);
+    border-radius: 20px;
+    border-style: dotted;
+    background-position: center;
+    background-attachment: fixed; 
+    background-repeat: no-repeat;
+
+}*/
+
+.banner{
+    width: 1500px;
+    display: block;
+    position: relative;
+    left: 200px;
+    height: 600px;
+    margin: 10px;
+    padding: 10px 10px 10px 10px;
+    border: 2px solid rgb(84, 45, 40);
+    border-radius: 20px;
+    border-style: dotted;
+}
+
+
+.banner-text { 
+    position: relative;
+    top: -500px;
+    left: 30px;
+    text-align: center;
+    font-weight: bolder;
+    text-shadow: rgb(241, 125, 87);
     color: rgb(84, 45, 40);
-    padding-top: 25px;
+    font-size: 25px;
+    margin-left: 350px;
+    margin-right: 350px;
+    border-radius: 15px;
+    background-color: beige;
+    fill-opacity: 5;
+
+}
+
+.underline{
+    text-decoration: underline;
+    font-size: 35px;
+
 }
 
 h3 {
@@ -26,38 +69,63 @@ h3 {
 }
  
 .logo{
-    width: 150px;
-    height: 80px;
-    float: left;
+    width: 200px;
+    height: 100px;
     padding: 8px;
 }
-/* img {
-    width: 200px;
-} */
 
 .menu {
     width: 900px;
     margin: 0 auto; /*centrado */
 }
 
-header { /* Selectores tipo directo */
+
+
+.contenedor-nav{
     background: rgb(218, 118, 53);
-    width: 100%;
-    clear: both;
-    content: ''; 
-    display: table;
+    display: flex;
+    gap: 100px 200px;
+    
 }
 
-nav {
-    float: right;
-}
-
-nav ul li {
+.contenedor-ul{
+    display: flex;
     list-style: none;
-    margin-left: 20px;
-    padding: 25px;
-    padding-right: 100px;
-    float: left;
+    margin: 20px;
+    padding: 4px;
+    flex-flow: row wrap;
+    justify-content: flex-end;     
+    gap: 60px;
+}
+
+.contenedor-nav li{ 
+    margin: 1;
+    /* background-color: aqua; */
+    padding: 10px; /* alrededor del texto */
+    
+}
+
+.contenedor-nav li a {
+    /* background-color: gold; */
+    padding: 0px; /* el texto como tal */
+}
+
+.input-buscar{
+    display: flex;
+    align-self: center;
+}
+
+.carrito{
+    align-self: center;
+    width: 75px;
+    height: 60px;
+    padding: 8px;
+}
+
+.icon-buscar{
+    height: 20px;
+    width: 20px;
+
 }
 
 nav ul li a {
@@ -67,14 +135,9 @@ nav ul li a {
 
 }
 
-.banner { /* Selectores tipo clase*/
-    height: 300px;
-    background-image: url('./assets/img/cocina-integral-banner.jpeg');
-    background-size: contain;
-    background-attachment: fixed;
-}
 
-#parrafo-mision { /* Selectores tipo ID */
+
+.parrafo-mision { /* Selectores tipo ID */
     text-align: justify;
     color: rgb(84, 45, 40);
     font-family: 'Bree Serif', serif;
@@ -87,4 +150,141 @@ nav ul li a {
     padding-bottom: 25px;
 }
 
-/*  */
+/* Galería con GRID */
+
+.grid-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: blueviolet;
+    border-radius: 4px;
+    transition: transfrom 0.3s ease-in-out;
+
+    border: solid 1px rgb(218, 118, 53);
+    font-size: 60px;
+    background: cover;
+}
+
+.grid-item:hover{
+    filter: opacity(0.9);
+    transform: scale(1.04);
+}
+
+.gallery-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-auto-rows: minmax(200px, 1fr);
+    gap: 20px;
+    padding: 20px;
+    grid-auto-flow: dense;
+}
+
+@media (min-width: 600px){
+    .dos-columas{
+        grid-column: span 2;
+    }
+
+    .dos-filas{
+        grid-row: span 2;
+    }
+
+    .tres-columnas{
+        grid-row: span 3;
+    }
+}
+
+.item1{
+    background-image: url("./assets/img/closet.png");
+    background-size: cover;
+}
+
+.item2{
+    background-image: url("./assets/img/comedor.jpg");
+    background-size: cover;
+}
+
+.item3{
+    background-image: url("./assets/img/mueble2.png");
+    background-size: cover;
+}
+
+.item4{
+    background-image: url("./assets/img/recamara.jpg");
+    background-size: cover;
+}
+
+.item5{
+    background-image: url("./assets/img/tocador.png");
+    background-size: cover;
+}
+
+.item6{
+    background-image: url("./assets/img/mueble-peces.jpg");
+    background-size: cover;
+}
+
+.item7{
+    background-image: url("./assets/img/mueble3.jpg");
+    background-size: cover;
+}
+
+.item8{
+    background-image: url("./assets/img/comedor2.jpg");
+    background-size: cover;
+}
+
+.item9{
+    background-image: url("./assets/img/closet.png");
+    background-size: cover;
+}
+
+.item10{
+    background-image: url("./assets/img/closet.png");
+    background-size: cover;
+}
+
+h2{
+    padding-bottom: 30px;
+    padding-top: 20px;
+}
+
+.btn{
+    border-radius: 3px;
+    display: inline-block;
+    padding: 20px 15px;
+    text-decoration: none;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.btn-cafe{
+    color: wheat;
+    background-color: chocolate;
+}
+
+.btn-cafe:hover{
+    background-color: gray;
+}
+
+.btn-cafe:active{
+    background-color: rgb(41, 38, 38);
+}
+
+form{
+    background-color: beige;
+    color: #999;
+    padding: 10px;
+    margin: 0 auto;
+    width: 300px;
+
+}
+
+.datos-interesantes p:first-child{
+    background-color: beige;
+    
+}
+
+.datos-interesantes p:last-child{
+    background-color: rgb(212, 169, 127);
+}

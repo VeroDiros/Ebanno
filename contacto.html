@@ -9,10 +9,10 @@
 </head>
 <body>
     <header>
-        <div >
+        <div class="contenedor-nav">
             <img class="logo" src="./assets/img/logo-ebanno.png" alt="Logo" height="100" width="100">  <!--LOGO-->
             <nav> <!--BARRA DE NAVEGACIÓN-->
-                <ul>
+                <ul class="contenedor-ul">
                     <li>
                         <a href="./index.html">Inicio</a>
                     </li>
@@ -27,10 +27,15 @@
                     </li>
                 </ul>
             </nav>
+                <div class="input-buscar">
+                    <input type="text" name="" id="" placeholder="Buscar">
+                    <button  type="submit"><img class="icon-buscar" src="./assets/img/lupa.png" alt="buscar" /></button>
+                </div>
+                <img class="carrito" src="./assets/img/carrito-vacio.png" alt="carrito" height="100" width="100">
         </div> 
     </header>
     <main>
-        <section>
+        <section class="">
             <form action="">
                 <label for="">Ingresa tu nombre:</label>
                 <input type="text" name="" id="" placeholder="Nombre">
@@ -54,16 +59,16 @@
                 <div>
                     <h4>Elige el tema del que quieres hablar: </h4>
                     <select name="tema-comentario" id="">
-                        <option value="Servicio">Servicio</option>
-                        <option value="Limpieza">Limpieza</option>
-                        <option value="Satisfacion">Satisfación</option>
+                        <option value="Servicio">Cocinas Integrales</option>
+                        <option value="Limpieza">Muebles a la medida</option>
+                        <option value="Satisfacion">Dudas o comentarios</option>
                     </select>
                 </div>
                 <textarea name="Comentario" id="" cols="30" rows="10" placeholder="¡Haz tu comentario!"></textarea>
                 </div>
                 <div>
-                    <input type="submit" value="Enviar formulario">
-                    <input type="submit" value="Limpiar formulario">
+                    <input class="btn-cafe" type="submit" value="Enviar formulario">
+                    <input class="btn-cafe" type="submit" value="Limpiar formulario">
                 </div>
             </form>
         </section>

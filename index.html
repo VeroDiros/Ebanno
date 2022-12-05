@@ -13,10 +13,10 @@
 </head>
 <body>
     <header>
-        <div >
+        <div class="contenedor-nav">
             <img class="logo" src="./assets/img/logo-ebanno.png" alt="Logo" height="100" width="100">  <!--LOGO-->
             <nav> <!--BARRA DE NAVEGACIÓN-->
-                <ul>
+                <ul class="contenedor-ul">
                     <li>
                         <a href="./index.html">Inicio</a>
                     </li>
@@ -31,28 +31,39 @@
                     </li>
                 </ul>
             </nav>
+                <div class="input-buscar">
+                    <input type="text" name="" id="" placeholder="Buscar">
+                    <button  type="submit"><img class="icon-buscar" src="./assets/img/lupa.png" alt="buscar" /></button>
+                </div>
+                <img class="carrito" src="./assets/img/carrito-vacio.png" alt="carrito" height="100" width="100">
         </div> 
     </header>
     <main>
         <h1>Promociones</h1>
         <section>
             <div>
-                <h2 class="banner" >BANNER</h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, vel ipsam distinctio deserunt maxime quisquam doloremque doloribus saepe accusamus repudiandae. Commodi voluptate minima, debitis porro reprehenderit eos possimus laboriosam minus?
-                </p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15092.495474889556!2d-98.2103726!3d18.97013615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2smx!4v1668652334789!5m2!1ses!2smx" width="1800" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <img class="banner" src="./assets/img/cocina-integral-banner.jpeg" alt="banner">
+                    <div>
+                        <p class="banner-text" > Los muebles decoran, aportan personalidad y crean estilo en el hogar.</p>
+                        <p class="banner-text underline">Expresa tu creatividad con Ebanno</p>
+                    </div> 
+            
+                
+            </div>
+            <div class="gallery-container">
+                <div class="grid-item item1"></div>
+                <div class="grid-item dos-columas item2"></div>
+                <div class="grid-item item3"></div>
+                <div class="grid-item dos-filas item4"></div>
+                <div class="grid-item item5"></div>
+                <div class="grid-item dos-columas item6"></div>
+                <div class="grid-item item7"></div>
+                <div class="grid-item dos-columas item8"></div>
+                <div class="grid-item item9"></div>
+                <div class="grid-item dos-filas item10"></div>
             </div>
             <div>
-                <img src="./assets/img/segunda-sucursal.jpeg" alt="Segunda Sucursal" height="500px" width="500px">
-                <h2>Segunda Sucursal</h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium fugit mollitia perspiciatis distinctio incidunt rem officiis, vitae illum dicta temporibus debitis laudantium esse dignissimos voluptatem harum aut, amet beatae! Nam.
-                </p>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d95728.10299524006!2d-98.22071885488904!3d19.148942582136588!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2smx!4v1668652360140!5m2!1ses!2smx" width="1800" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-            <div>
-                <audio src="./assets/audios/cancion-restaurante.mp3" controls></audio>
+                <audio src="./assets/audios/cancion-restaurante.mp3" controls autoplay></audio>
             </div>
         </section>
     </main>
