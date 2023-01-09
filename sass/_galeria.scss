@@ -98,9 +98,25 @@
 
 .card-body{
     background-color: $colorSecundario;
+
 }
 
-.card-img-top:hover{
+.card:hover{
     filter: opacity(0.9);
     transform: scale(1.04);
+}
+
+/*&:hover{
+    filter: opacity(0.9);
+    transform: scale(1.04); 
+}*/
+
+img, svg{
+    object-fit: cover;
+}
+
+@include fullScreen {
+    .img-carrusel{
+    height: 600px;
+}
 }
