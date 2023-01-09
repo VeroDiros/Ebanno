@@ -1,0 +1,28 @@
+@import "_variables";
+
+* { /* Selector universal */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /*que el ancho abarque el paddig y el borde*/
+} 
+
+body{
+    background-color:$colorBackground;
+    
+}
+
+h1 { /* Selectores tipo directo */
+    text-align: center;
+    margin: 15px;
+    color: $coloCafe;
+    font-family: $fuenteRaleway;
+}
+
+h3 {
+    padding: 20px 20px 20px;
+}
+
+.espacio-div {
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}

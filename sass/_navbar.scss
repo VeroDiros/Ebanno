@@ -1,0 +1,19 @@
+@import "_variables";
+
+.navbar{
+    background-color: $colorNavbar;
+
+}
+
+.logo{
+    width: 90px;
+    height: 70px;
+    padding: 8px;
+}
+
+.carrito{
+    align-self: center;
+    width: 75px;
+    height: 60px;
+    padding: 8px;
+}

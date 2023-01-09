@@ -1,0 +1,62 @@
+@import "_mixins";
+@import "_variables";
+
+.banner{
+    
+    width: 370px;
+    display: block;
+    position: relative;
+    height: 400px;
+    left: 0px;
+    border: none;
+    opacity: .7;
+
+}
+    
+.banner-text { 
+    position: relative;
+    top: -300px;
+    left: 0px;
+    text-align: center;
+    font-weight: bolder;
+    text-shadow: 1px 1px 2px rgb(207, 199, 197); /*editar*/
+    color: $coloCafe;
+    font-size: 15px;
+    margin-left: 30px;
+    margin-right: 30px;
+    /*background-color: beige;*/
+    fill-opacity: 5;
+
+}
+
+
+
+.underline{
+    text-decoration: underline;
+    font-size: 20px;
+
+}
+/*
+.banner{
+    width: 1500px;
+    display: block;
+    position: relative;
+    left: 200px;
+    height: 600px;
+    margin: 10px;
+    padding: 10px 10px 10px 10px;
+    border: 2px solid rgb(84, 45, 40);
+    border-radius: 20px;
+    border-style: dotted;
+    
+    @include mobile{
+    width: 370px;
+    display: block;
+    position: relative;
+    height: 400px;
+    padding: 10px 10px 10px 3px;
+    left: 0px;
+    border: none;
+
+    }
+}*/
