@@ -51,7 +51,7 @@ h3 {
   padding: 20px;
   grid-auto-flow: dense; }
 
-@media only screen and (max-width: 600px) {
+@media (min-width: 600px) {
   .dos-columas {
     grid-column: span 2; }
 
@@ -109,6 +109,18 @@ h3 {
   left: 0px;
   border: none;
   opacity: .7; }
+  @media (min-width: 600px) and (max-width: 1200px) {
+    .banner {
+      width: 1500px;
+      display: block;
+      position: relative;
+      left: 200px;
+      height: 600px;
+      margin: 10px;
+      padding: 10px 10px 10px 10px;
+      border: 2px solid #542d28;
+      border-radius: 20px;
+      border-style: dotted; } }
 
 .banner-text {
   position: relative;
@@ -124,6 +136,18 @@ h3 {
   margin-right: 30px;
   /*background-color: beige;*/
   fill-opacity: 5; }
+  @media (min-width: 600px) and (max-width: 1200px) {
+    .banner-text {
+      width: 1500px;
+      display: block;
+      position: relative;
+      left: 200px;
+      height: 600px;
+      margin: 10px;
+      padding: 10px 10px 10px 10px;
+      border: 2px solid #542d28;
+      border-radius: 20px;
+      border-style: dotted; } }
 
 .underline {
   text-decoration: underline;
@@ -163,8 +187,8 @@ h3 {
 
 .carrito {
   align-self: center;
-  width: 75px;
-  height: 60px;
+  width: 45px;
+  height: 40px;
   padding: 8px; }
 
 /*# sourceMappingURL=style.css.map */

@@ -10,7 +10,19 @@
     left: 0px;
     border: none;
     opacity: .7;
-
+    
+    @include fullScreen {
+        width: 1500px;
+        display: block;
+        position: relative;
+        left: 200px;
+        height: 600px;
+        margin: 10px;
+        padding: 10px 10px 10px 10px;
+        border: 2px solid rgb(84, 45, 40);
+        border-radius: 20px;
+        border-style: dotted;
+    }
 }
     
 .banner-text { 
@@ -26,6 +38,22 @@
     margin-right: 30px;
     /*background-color: beige;*/
     fill-opacity: 5;
+
+    @include fullScreen {
+        position: relative;
+        top: -500px;
+        left: 30px;
+        text-align: center;
+        font-weight: bolder;
+        text-shadow: rgb(241, 125, 87);
+        color: rgb(84, 45, 40);
+        font-size: 25px;
+        margin-left: 350px;
+        margin-right: 350px;
+        border-radius: 15px;
+        background-color: beige;
+        fill-opacity: 5;
+    }
 
 }
 

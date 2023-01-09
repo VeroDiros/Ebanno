@@ -28,7 +28,7 @@
     grid-auto-flow: dense;
 }
 
-@include mobile {
+@media (min-width: 600px) {
     .dos-columas{
         grid-column: span 2;
     }

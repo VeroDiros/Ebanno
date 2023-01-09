@@ -2,8 +2,14 @@
 
 //Media queries
 
-@mixin mobile {
+/*@mixin mobile {
     @media only screen and (max-width: 600px){
+        @content
+    }
+}*/
+
+@mixin fullScreen {
+    @media (min-width: 600px) and (max-width: 3000px){
         @content
     }
 }
