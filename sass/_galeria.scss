@@ -115,7 +115,7 @@ img, svg{
     object-fit: cover;
 }
 
-@include fullScreen {
+@include respond(fullScreen) {
     .img-carrusel{
     height: 600px;
 }

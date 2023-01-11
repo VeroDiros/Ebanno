@@ -38,7 +38,7 @@ h2 {
 
 /* Galería con GRID */
 /*@mixin mobile {
-    @media only screen and (max-width: 600px){
+    @media only screen and (max-width: 600px){ 
         @content
     }
 }*/
@@ -146,7 +146,7 @@ img, svg {
   }
 }
 /*@mixin mobile {
-    @media only screen and (max-width: 600px){
+    @media only screen and (max-width: 600px){ 
         @content
     }
 }*/
@@ -168,6 +168,17 @@ img, svg {
     height: 600px;
     margin: 10px;
     padding: 10px 10px 10px 10px;
+  }
+}
+@media only screen and (min-width: 720px) and (max-width: 1024px) {
+  .banner {
+    width: 650x;
+    display: block;
+    position: relative;
+    left: 0px;
+    height: 600px;
+    margin: 0px;
+    padding: 0px 0px 0px 0px;
   }
 }
 
@@ -199,6 +210,21 @@ img, svg {
     margin-right: 350px;
     border-radius: 15px;
     fill-opacity: 5;
+  }
+}
+@media only screen and (min-width: 720px) and (max-width: 1024px) {
+  .banner-text {
+    position: relative;
+    top: -390px;
+    left: 10px;
+    text-align: center;
+    font-weight: bolder;
+    text-shadow: rgb(241, 125, 87);
+    color: rgb(84, 45, 40);
+    font-size: 23px;
+    margin-left: 50px;
+    margin-right: 50px;
+    border-radius: 15px;
   }
 }
 

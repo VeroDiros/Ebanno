@@ -1,15 +1,27 @@
-
-
+@import "_variables";
 //Media queries
 
 /*@mixin mobile {
-    @media only screen and (max-width: 600px){
+    @media only screen and (max-width: 600px){ 
         @content
     }
 }*/
 
-@mixin fullScreen {
-    @media only screen and (min-width: 600px) and (max-width: 2000px){
-        @content
+@mixin respond($breakpoint) {
+
+    @if $breakpoint == fullScreen {
+        @media only screen and (min-width: 600px) and (max-width: 2000px) {
+            @content
+        }
     }
+
+    @if $breakpoint == tablet {
+        @media only screen and (min-width: 720px) and (max-width: 1024px){
+            @content
+        }
+
+    }
+
+
+    
 }

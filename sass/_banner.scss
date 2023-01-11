@@ -11,7 +11,7 @@
     border: none;
     opacity: .7;
     
-    @include fullScreen {
+    @include respond(fullScreen) {
         width: 1500px;
         display: block;
         position: relative;
@@ -20,6 +20,16 @@
         margin: 10px;
         padding: 10px 10px 10px 10px;
         
+    }
+
+    @include respond(tablet){
+        width: 650x;
+        display: block;
+        position: relative;
+        left: 0px;
+        height: 600px;
+        margin: 0px;
+        padding: 0px 0px 0px 0px;
     }
 }
     
@@ -37,7 +47,7 @@
     /*background-color: beige;*/
     fill-opacity: 5;
 
-    @include fullScreen {
+    @include respond(fullScreen) {
         position: relative;
         top: -390px;
         left: 10px;
@@ -50,6 +60,20 @@
         margin-right: 350px;
         border-radius: 15px;
         fill-opacity: 5;
+    }
+    @include respond(tablet){
+        position: relative;
+        top: -390px;
+        left: 10px;
+        text-align: center;
+        font-weight: bolder;
+        text-shadow: rgb(241, 125, 87);
+        color: rgb(84, 45, 40);
+        font-size: 23px;
+        margin-left: 50px;
+        margin-right: 50px;
+        border-radius: 15px;
+        
     }
 
 }
