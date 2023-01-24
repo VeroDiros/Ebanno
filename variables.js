@@ -104,3 +104,37 @@ console.log(raza, duenio, color);
 const arreglo = ["Veronica", 23, 1999, ["rosa", 2] ];
 const [nombre, edad, anio] = arreglo;
 console.log(nombre, edad, anio);
+
+//Declara una variable “let edad = Number”, luego crea un condicional “if” donde hagas una comparación, si la edad es mayor o igual a 18, imprime en consola “VÁLIDO”. De lo contrario “NO VÁLIDO”.
+let edad1 = 16;
+if(edad1 >= 18){
+    console.log("VÁLIDO")
+}else{
+    console.log("NO VÁLIDO")
+}
+//Crea un array que contenga mínimo 4 objetos, que a su vez contengan como mínimo 3 claves e imprime todo el array en consola con un bucle “for”.
+let mascotas = [
+    {animal: 'perro', color: 'café', tamaño:'mediano', raza:'cocker spanish'}, 
+    {animal: 'caballo', color: 'negro', tamaño:'grande', raza:'pura sangre'}, 
+    {animal: 'pez', color: 'naranja con rayas blancas y negras', tamaño:'mediano', raza:'pez payaso'}, 
+    {animal: 'hamster', color: 'gris', tamaño:'pequeño', raza:'ruso'}
+];
+
+for(i= 0; i < mascotas.length; i++){
+    console.log('Mis mascotas son: un ' + mascotas[i].animal + " " + mascotas[i].tamaño + " de color " + mascotas[i].color + " y es raza " + mascotas[i].raza);
+}
+
+//Crear un bucle switch donde simula la venta de entradas al cine. Donde dependiendo de la edad el cliente recibe alguna promoción.
+switch (edad1){
+    case 18: 
+        console.log("Tienes una promoción 2x1")
+        break;
+    case 60:
+        console.log("Tienes una promoción 3x1")
+        break;
+    case 10:
+        console.log("Los miercoles tu entrada es gratis!")
+        break;
+    default:
+        console.log("Llevate unas palomitas grandes con un descuento del 30%")
+}
