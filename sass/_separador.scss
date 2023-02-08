@@ -1,0 +1,25 @@
+.anuncio-orange{
+    width: 346px;
+    height: 220px;
+    display: block;
+    position: relative;
+    top: -150px;
+    left: 16px;
+    background-color: rgb(218, 118, 53);
+
+    p{
+    display: block;
+    font-weight: bolder;
+    text-shadow: rgb(244, 212, 160) 1px 0 10px;
+    color: antiquewhite;
+    text-align: center;
+    font-size: 30px;
+    padding: 20px 0px 0px 0px;
+    }
+
+    button{
+    background-color: rgb(247, 226, 169);
+    
+    margin-left: 120px;
+    }
+}
