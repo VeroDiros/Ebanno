@@ -138,3 +138,41 @@ switch (edad1){
     default:
         console.log("Llevate unas palomitas grandes con un descuento del 30%")
 }
+
+/////////////////////////////ACTIVDAD 8
+let muebles= [
+    {tipo: 'comedor', stock: 8, precio: 1500.50, tipoMdera: 'pino'},
+    {tipo: 'ropero', stock: 5, precio: 1200.60, tipoMdera: 'cedro'},
+    {tipo: 'silla', stock: 10, precio: 500.00, tipoMdera: 'roble'},
+    {tipo: 'closet', stock: 9, precio: 150.50, tipoMdera: 'caoba'},
+    {tipo: 'buro', stock: 7, precio: 1800.80, tipoMdera: 'pino'},
+    {tipo: 'tocador', stock: 2, precio: 2000.90, tipoMdera: 'arce'}
+
+]
+
+const tipoMueble = muebles.map(elemento => elemento.tipo)
+console.log(tipoMueble);
+
+const precio = muebles.filter(productos => productos.precio > 200)
+console.log(precio);
+
+const preciosP = muebles.map(producto => producto.precio)
+console.log(preciosP);
+
+const promedio = preciosP.reduce((anterior, actual) => anterior + actual / preciosP.length, 0)
+console.log(promedio)      
+
+let ordenar  = tipoMueble.sort((a, b) => {
+    if(a == b){
+        return 0;
+    }
+    if(a < b){
+        return -1;
+    }
+    return 1;
+});
+
+
+
+
+console.log(ordenar)
