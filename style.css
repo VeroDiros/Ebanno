@@ -270,7 +270,8 @@ form {
   padding-top: 20px; }
 
 .item {
-  border-radius: 10px; }
+  border-radius: 10px;
+  background-color: #f3b95b; }
   .item:hover {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); }
   .item img {

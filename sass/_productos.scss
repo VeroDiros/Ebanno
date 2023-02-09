@@ -1,12 +1,15 @@
+@import "_variables";
 .contenedor-items{
     display: grid;
     grid-template-columns: repeat(5, 2fr);
     gap: 30px;
     padding-top: 20px;
+    
 }
 
 .item{
     border-radius: 10px;
+    background-color: $colorSecundario;
     
     &:hover{
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
@@ -30,5 +33,4 @@
 
 .info-producto{
     padding: 15px, 30px;
-
 }
