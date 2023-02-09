@@ -3,9 +3,14 @@
     height: 220px;
     display: block;
     position: relative;
-    top: -150px;
-    left: 16px;
+    top: -100px;
     background-color: rgb(218, 118, 53);
+
+    @include respond(fullScreen) {
+        width: 100%;
+        height: 170px;
+        top: -50px;
+    }
 
     p{
     display: block;
