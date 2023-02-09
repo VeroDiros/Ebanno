@@ -1,48 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" 
-    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Raleway:wght@300&display=swap"
+        rel="stylesheet">
     <title>¿Quiénes somos?</title>
 </head>
+
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg bg-orange"> <!--BARRA DE NAVEGACIÓN-->
+        <nav class="navbar navbar-expand-lg bg-orange">
+            <!--BARRA DE NAVEGACIÓN-->
             <div class="container-fluid">
-            <!--<img class="navbar-brand" src="./assets/img/logo-ebanno.png" alt="Logo" height="100" width="100">  LOGO-->
+                <a href="index.html"> <img class="navbar-brand logo" src="./assets/img/logo-ebanno.png" alt="Logo"> </a>
+                <!--<img class="navbar-brand" src="./assets/img/logo-ebanno.png" alt="Logo" height="100" width="100">  LOGO-->
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn" data-toggle="modal" data-target="#exampleModal"><img
+                        class="navbar-brand carrito" src="./assets/img/add-cart.png" alt="carrito">
+                    <!--Carrito-->
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                ...
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+                <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+
                 <a class="navbar-brand" href="./assets/img/ebanno1.png"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                         <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
+                            <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
                         </li>
                         <li class="nav-item">
-                         <a class="nav-link active" aria-current="page" href="./quienes-somos.html">¿Quiénes somos?</a>
+                            <a class="nav-link active" aria-current="page" href="./quienes-somos.html">¿Quiénes
+                                somos?</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Productos
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">Productos
                             </a>
                             <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="./muebles.html">Muebles</a></li>
-                            <li><a class="dropdown-item" href="./muebles-ala-medida.html">Muebles a la medida</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="./cocinas-integrales.html">Cocinas Integrales</a></li>
-                          </ul>
+                                <li><a class="dropdown-item" href="./muebles.html">Muebles</a></li>
+                                <li><a class="dropdown-item" href="./muebles-ala-medida.html">Muebles a la medida</a>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="./cocinas-integrales.html">Cocinas Integrales</a>
+                                </li>
+                            </ul>
                         </li>
                         <li class="nav-item">
-                         <a class="nav-link active" aria-current="page" href="./contacto.html">Contacto</a>
+                            <a class="nav-link active" aria-current="page" href="./contacto.html">Contacto</a>
                         </li>
                     </ul>
                     <form class="d-flex" role="search">
@@ -50,14 +97,17 @@
                         <button class="btn btn-buscar" type="submit">Buscar</button>
                     </form>
                 </div>
-            <!-- <img class="carrito" src="./assets/img/carrito-vacio.png" alt="carrito" height="100" width="100"> CARRITO-->
-            </div> 
+                <!-- <img class="carrito" src="./assets/img/carrito-vacio.png" alt="carrito" height="100" width="100"> CARRITO-->
+            </div>
         </nav>
     </header>
     <main>
         <section>
-            <h2> ¿Dónde nos ubicamos? </h2> 
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15092.495474889556!2d-98.2103726!3d18.97013615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2smx!4v1668652334789!5m2!1ses!2smx" width="1800" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <h2> ¿Dónde nos ubicamos? </h2>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15092.495474889556!2d-98.2103726!3d18.97013615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2smx!4v1668652334789!5m2!1ses!2smx"
+                width="1800" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>
         <!-- <aside> -->
         <section>
@@ -65,34 +115,41 @@
             <div class="espacio-div">
                 <h3>Misión</h3>
                 <p class="parrafo-mision">
-                    Ebanno es una empresa familiar Michoacana dedicada a la fabricación y venta de productos y artesanías utilizando en su mayoría como material base la madera. 
-                    Nuestro objetivo de hacer llegar a nuestros clientes muebles, artesanías y cocinas integrales de buena calidad, con la opción de hacerlos a la medida.
-                    Esto permite a nuestros clientes poder personalizar los interiores de su casa además de facilitar la actividades comunes de su hogar.
+                    Ebanno es una empresa familiar Michoacana dedicada a la fabricación y venta de productos y
+                    artesanías utilizando en su mayoría como material base la madera.
+                    Nuestro objetivo de hacer llegar a nuestros clientes muebles, artesanías y cocinas integrales de
+                    buena calidad, con la opción de hacerlos a la medida.
+                    Esto permite a nuestros clientes poder personalizar los interiores de su casa además de facilitar la
+                    actividades comunes de su hogar.
                 </p>
             </div>
-            </section>
-            <section>
-                <h3>Visión</h3>
-                    <p class="parrafo-mision">
-                        Ebanno quiere lograr que todas las personas tengan acceso a muebles, artesanias y cocinas integrales de buena calidad, se desea que 
-                        cualquier persona tenga acceso a mejorar y personalizar uno de los lugares más importantes de nuestras vidas: aquel lugar donde descansará,
-                        crecerá y permanecerá gran parte del tiempo: su hogar.
-                    </p>
-            </section>
-            <!-- <h3>Valores</h3>
+        </section>
+        <section>
+            <h3>Visión</h3>
+            <p class="parrafo-mision">
+                Ebanno quiere lograr que todas las personas tengan acceso a muebles, artesanias y cocinas integrales de
+                buena calidad, se desea que
+                cualquier persona tenga acceso a mejorar y personalizar uno de los lugares más importantes de nuestras
+                vidas: aquel lugar donde descansará,
+                crecerá y permanecerá gran parte del tiempo: su hogar.
+            </p>
+        </section>
+        <!-- <h3>Valores</h3>
                 <P>
                     Para Ebanno la satisfacción del cliente es lo más importante, dentro de la empres
                 </P> -->
 
-            <!-- <img src="https://media.glamour.mx/photos/61908489a6e030d6480fc2a6/3:2/w_2361,h_1574,c_limit/204223.jpg" alt="comida" height="1000"> -->
+        <!-- <img src="https://media.glamour.mx/photos/61908489a6e030d6480fc2a6/3:2/w_2361,h_1574,c_limit/204223.jpg" alt="comida" height="1000"> -->
         </aside>
-        
+
     </main>
     <footer class="background-footer">
 
     </footer>
     <!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" 
-integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
