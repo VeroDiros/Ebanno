@@ -140,13 +140,13 @@ switch (edad1){
 }
 
 /////////////////////////////ACTIVDAD 8
-let muebles= [
-    {tipo: 'comedor', stock: 8, precio: 1500.50, tipoMdera: 'pino'},
-    {tipo: 'ropero', stock: 5, precio: 1200.60, tipoMdera: 'cedro'},
-    {tipo: 'silla', stock: 10, precio: 500.00, tipoMdera: 'roble'},
-    {tipo: 'closet', stock: 9, precio: 150.50, tipoMdera: 'caoba'},
-    {tipo: 'buro', stock: 7, precio: 1800.80, tipoMdera: 'pino'},
-    {tipo: 'tocador', stock: 2, precio: 2000.90, tipoMdera: 'arce'}
+const muebles= [
+    {tipo: 'comedor', stock: 8, precio: 1500.50, tipoMdera: 'pino', img: 'assets/'},
+    {tipo: 'ropero', stock: 5, precio: 1200.60, tipoMdera: 'cedro', img: 'assets/'},
+    {tipo: 'silla', stock: 10, precio: 500.00, tipoMdera: 'roble', img: 'assets/'},
+    {tipo: 'closet', stock: 9, precio: 150.50, tipoMdera: 'caoba', img: 'assets/'},
+    {tipo: 'buro', stock: 7, precio: 1800.80, tipoMdera: 'pino', img: 'assets/'},
+    {tipo: 'tocador', stock: 2, precio: 2000.90, tipoMdera: 'arce', img: 'assets/'}
 
 ]
 
@@ -172,7 +172,15 @@ let ordenar  = tipoMueble.sort((a, b) => {
     return 1;
 });
 
+console.log(ordenar);
 
+let precioMax = 0;
 
-
-console.log(ordenar)
+muebles.forEach(element => {
+    console.log(element.precio);
+    precioMax = Math.max(element.precio, precioMax);
+    precioMaxR = Math.round(precioMax);
+    
+});
+console.log('El precio máximo es:', precioMax);
+console.log('El precio máximo redondeado es:', precioMaxR);
