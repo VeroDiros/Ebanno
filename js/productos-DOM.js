@@ -9,19 +9,21 @@ const muebles= [
 
 const contenedorProductos = document.getElementById("contenedorProductos");
 
-muebles.array.forEach(mueble => {
-    contenedorProductos.innerHTML =
+muebles.forEach(mueble => {
+    contenedorProductos.innerHTML +=
     `
-    <div class="item">
-            <figure>
-                <img src="assets/img/closet.png" class="card-img-top" alt="...">
-            </figure>
-            <div class="info-producto">
-                <h5 class="card-title">${muebles.tipo}</h5>
-                <p class="card-text">${muebles.precio}</p>
-                <button> Añadir al carrito </button>
-                <!-- <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> -->
+    <div class="contenedor-items">    
+        <div class="item">
+                <figure>
+                    <img src="assets/img/closet.png" class="card-img-top" alt="...">
+                </figure>
+                <div class="info-producto">
+                    <h5 class="card-title">${mueble.tipo}</h5>
+                    <p class="card-text">${mueble.precio}</p>
+                    <button> Añadir al carrito </button>
+                    <!-- <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> -->
+                </div>
             </div>
-        </div>
+    </div>
     `
-})
+});

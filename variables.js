@@ -139,7 +139,7 @@ switch (edad1){
         console.log("Llevate unas palomitas grandes con un descuento del 30%")
 }
 
-/////////////////////////////ACTIVDAD 8
+/////////////////////////////         ACTIVDAD 8       /////////////////////////////////////
 const muebles= [
     {tipo: 'comedor', stock: 8, precio: 1500.50, tipoMdera: 'pino', img: 'assets/'},
     {tipo: 'ropero', stock: 5, precio: 1200.60, tipoMdera: 'cedro', img: 'assets/'},
@@ -184,3 +184,7 @@ muebles.forEach(element => {
 });
 console.log('El precio máximo es:', precioMax);
 console.log('El precio máximo redondeado es:', precioMaxR);
+
+
+
+/////////////////////////////////////////////    ACTIVIDAD 10      /////////////////////////////
