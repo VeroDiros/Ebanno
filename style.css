@@ -308,7 +308,8 @@ form {
   font-size: 18px;
   font-weight: 900; }
 
-.with {
-  width: 33.3333%; }
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; }
 
 /*# sourceMappingURL=style.css.map */

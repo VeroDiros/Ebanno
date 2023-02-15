@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "nombre": "Silla",
+        "precio":1200,
+        "img": "../assets/img/mueble2.png",
+        "decripcion": "Esto es una silla"
+        
+    },
+    {
+        "id": 2,
+        "nombre": "Closet",
+        "precio":100,
+        "img": "../assets/img/closet.png",
+        "decripcion": "Esto es un closet"
+        
+    },
+    {
+        "id": 3,
+        "nombre": "Mueble",
+        "precio":1256.5,
+        "img": "../assets/img/mueble-peces.jpg",
+        "decripcion": "Esto es un mueble"
+        
+    },
+    {
+        "id": 4,
+        "nombre": "comedor",
+        "precio":845.3,
+        "img": "../assets/img/comedor.jpg",
+        "decripcion": "Esto es un comedor"
+        
+    },
+    {
+        "id": 5,
+        "nombre": "Tocador",
+        "precio":9632.3,
+        "img": "../assets/img/tocador.png",
+        "decripcion": "Esto es un tocador"
+        
+    }
+]

@@ -125,12 +125,12 @@ let funcionBotonLS = () => {
         sectionLS.appendChild(createButton);
 
     }
-    var valueFromStorage = localStorage.getItem("idNombre");
-    let texto = document.getElementById("contenidoSaludo");
-    texto.innerHTML = 'Bienvenido nuevamente ' + valueFromStorage;
+    
 }
 
-
+var valueFromStorage = localStorage.getItem("idNombre");
+    let texto = document.getElementById("contenidoSaludo");
+    texto.innerHTML = 'Bienvenido nuevamente ' + valueFromStorage;
 
 
 
