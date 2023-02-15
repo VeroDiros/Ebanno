@@ -48,6 +48,7 @@ mueblesr.forEach(mueble => {
     btnAgregarCarrito.addEventListener("click", ()=> {
         agregarCarrito(mueble.id, carrito);
         agregarContadorCarrito();
+        actualizarCarrito();
     })
 });//poner clase al boton
 
@@ -66,7 +67,8 @@ const agregarContadorCarrito = () => {
 
 //Funcion visualizar carrito
 const actualizarCarrito = ()=>{
-    carrito.forEach(producto => {
+    contenidoCarrito.innerHTML = "";
+    carrito.forEach(mueble => {
         const div = document.createElement("div");
         div.innerHTML =
         `
@@ -74,5 +76,7 @@ const actualizarCarrito = ()=>{
         <p>${mueble.precio}</p>
         <p>Precio: ${mueble.tipoMdera}</p>
         `
+
+        contenidoCarrito.appendChild(div);
     })
 }
