@@ -30,21 +30,22 @@ let = zapatos = [
 ]
 // Todos los productos
 
+
 let contenido = zapatos.forEach(zapato => {
     let ulZapatos = document.createElement('ul');
     ulZapatos.innerHTML =
         `
-<li id="idMarca"> Marca: ${zapato.marca} </li> 
-<li id="idStock" > Stock: ${zapato.stock}</li>
-<li id="idPrecios"> Precio: ${zapato.precios}</li>
+<li> Marca: ${zapato.marca} </li>
+<li> Stock: ${zapato.stock}</li>
+<li> Precio: ${zapato.precios}</li>
 `;
     divZapato.appendChild(ulZapatos);
-    console.log(ulZapatos);
+    console.log(ulZapatos); 
 });
 
 //Intento de estilo rojo
-let keyLista = document.getElementById('idMarca');
-keyLista.style.color = "#FF0000";
+//let keyLista = document.getElementsByClassName("idMarca")
+//keyLista.style.color = "#FF0000";
 
 //Botones
 let botones = document.createElement('div');
@@ -78,9 +79,15 @@ const eventoMostrar = () => {
     sectionE.appendChild(divZapato);
 }
 
-//n5
+/////////////////////////////////////7n5
 
 
+let funcionTexto =() => {
+    var valueFromStorage = localStorage.getItem("idNombre");
+    let texto = document.getElementById("contenidoSaludo");
+    texto.innerHTML = 'Bienvenido nuevamente ' + valueFromStorage;
+}
+funcionTexto();
 
 let createButton = document.createElement('div');
 createButton.innerHTML =
@@ -103,6 +110,12 @@ let funcionBotonLS = () => {
     console.log(inputValue);
     localStorage.setItem("idNombre", inputValue);
     console.log(inputValue);
+    funcionTexto();
+
+    
+    
+}
+
 
     let createButtonr = document.createElement('div');
     createButtonr.innerHTML =
@@ -119,18 +132,16 @@ let funcionBotonLS = () => {
     })
 
     let funcionReiniciar = () => {
-        texto.innerHTML = '';
+        funcionTexto();
+        //texto.innerHTML = '';
         localStorage.clear();
         console.log(localStorage);
         sectionLS.appendChild(createButton);
+        sectionLS.appendChild(createButtonr);
 
     }
-    
-}
 
-var valueFromStorage = localStorage.getItem("idNombre");
-    let texto = document.getElementById("contenidoSaludo");
-    texto.innerHTML = 'Bienvenido nuevamente ' + valueFromStorage;
+
 
 
 
