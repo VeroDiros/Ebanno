@@ -1,14 +1,14 @@
 @import "_variables";
+
 .contenedor-items{
     display: grid;
-    grid-template-columns: repeat(4, 2fr);
+    grid-template-columns: repeat(4, 2fr); //repeat(5, 2fr)
     gap: 30px;
     padding-top: 20px;
     padding-left: 60px;
     padding-right: 60px;
-    
 } 
-//repeat(5, 2fr)
+
 .item{
     border-radius: 10px;
     background-color: $colorSecundario;
