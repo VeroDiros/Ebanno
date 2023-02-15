@@ -11,8 +11,7 @@ const contenedorProductos = document.getElementById("contenedorProductos");
 
 muebles.forEach(mueble => {
     contenedorProductos.innerHTML +=
-    `
-    <div class="contenedor-items">    
+    `   
         <div class="item">
                 <figure>
                     <img src="assets/img/closet.png" class="card-img-top" alt="...">
@@ -24,6 +23,7 @@ muebles.forEach(mueble => {
                     <!-- <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> -->
                 </div>
             </div>
-    </div>
     `
 });
+
+contenedorProductos.classList.add("contenedor-items");
