@@ -30,22 +30,21 @@ let = zapatos = [
 ]
 // Todos los productos
 
-
 let contenido = zapatos.forEach(zapato => {
     let ulZapatos = document.createElement('ul');
     ulZapatos.innerHTML =
         `
-<li> Marca: ${zapato.marca} </li>
-<li> Stock: ${zapato.stock}</li>
-<li> Precio: ${zapato.precios}</li>
+<li id="idMarca"> Marca: ${zapato.marca} </li> 
+<li id="idStock" > Stock: ${zapato.stock}</li>
+<li id="idPrecios"> Precio: ${zapato.precios}</li>
 `;
     divZapato.appendChild(ulZapatos);
-    console.log(ulZapatos); 
+    console.log(ulZapatos);
 });
 
 //Intento de estilo rojo
-//let keyLista = document.getElementsByClassName("idMarca")
-//keyLista.style.color = "#FF0000";
+let keyLista = document.getElementById('idMarca');
+keyLista.style.color = "#FF0000";
 
 //Botones
 let botones = document.createElement('div');
@@ -79,7 +78,7 @@ const eventoMostrar = () => {
     sectionE.appendChild(divZapato);
 }
 
-/////////////////////////////////////7n5
+//n5
 
 
 let funcionTexto =() => {
@@ -111,7 +110,8 @@ let funcionBotonLS = () => {
     localStorage.setItem("idNombre", inputValue);
     console.log(inputValue);
     funcionTexto();
-
+    sectionLS.appendChild(createButton);
+    sectionLS.appendChild(createButtonr);
     
     
 }
@@ -132,12 +132,13 @@ let funcionBotonLS = () => {
     })
 
     let funcionReiniciar = () => {
-        funcionTexto();
         //texto.innerHTML = '';
         localStorage.clear();
         console.log(localStorage);
+        funcionTexto();
         sectionLS.appendChild(createButton);
         sectionLS.appendChild(createButtonr);
+        
 
     }
 
