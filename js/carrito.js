@@ -1,0 +1,3 @@
+.delete-product {
+    cursor: pointer;
+  }

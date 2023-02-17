@@ -1,23 +1,23 @@
 const muebles= [
-    {tipo: 'comedor', stock: 8, precio: 1500.50, tipoMdera: 'pino', img: './assets'},
-    {tipo: 'ropero', stock: 5, precio: 1200.60, tipoMdera: 'cedro', img: 'assets/'},
-    {tipo: 'silla', stock: 10, precio: 500.00, tipoMdera: 'roble', img: 'assets/'},
-    {tipo: 'closet', stock: 9, precio: 150.50, tipoMdera: 'caoba', img: 'assets/'},
-    {tipo: 'buro', stock: 7, precio: 1800.80, tipoMdera: 'pino', img: 'assets/'},
-    {tipo: 'tocador', stock: 2, precio: 2000.90, tipoMdera: 'arce', img: 'assets/'}
+    {tipo: 'Comedor', stock: 8, precio: 1500.50, tipoMdera: 'Pino', img: './assets'},
+    {tipo: 'Ropero', stock: 5, precio: 1200.60, tipoMdera: 'Cedro', img: 'assets/'},
+    {tipo: 'Silla', stock: 10, precio: 500.00, tipoMdera: 'Roble', img: 'assets/'},
+    {tipo: 'Closet', stock: 9, precio: 150.50, tipoMdera: 'Caoba', img: 'assets/'},
+    {tipo: 'Buró', stock: 7, precio: 1800.80, tipoMdera: 'Pino', img: 'assets/'},
+    {tipo: 'Tocador', stock: 2, precio: 2000.90, tipoMdera: 'Arce', img: 'assets/'}
 
 ]
 
 function getSelectValue(){
-    document.getElementById("myDropdown").onchange = function() {
-        var sheet=document.getElementById("myDropdown").value;
+    document.getElementById("dropdownMenuButton1").onchange = function() {
+        var seleccion=document.getElementById("dropdownMenuButton1").value;
      
-        if(sheet=="uno"){
+        if(seleccion=="Alfabeticamente"){
         ordenar();
         }
-        else if(sheet=="dos"){
+        else if(seleccion=="dos"){
         }
-        else if(sheet="tres"){
+        else if(seleccion="tres"){
         }
         else{
         }

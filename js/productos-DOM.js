@@ -37,8 +37,8 @@ mueblesr.forEach(mueble => {
                 <div class="info-producto">
                     <h5 class="card-title">${mueble.tipo}</h5>
                     <p class="card-text">${mueble.precio}</p>
-                    <button id="agregarCarrito${mueble.id}"> Añadir al carrito </button>
-                    <!-- <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p> -->
+                    <button onclick="eliminardelCarrito()" id="agregarCarrito${mueble.id}"> Añadir al carrito </button>
+                    
                 </div>
             </div>
     `
@@ -49,10 +49,18 @@ mueblesr.forEach(mueble => {
         agregarCarrito(mueble.id, carrito);
         agregarContadorCarrito();
         actualizarCarrito();
+        eliminardelCarrito(mueble.id, carrito)
     })
 });//poner clase al boton
 
 contenedorProductos.classList.add("contenedor-items");
+
+//Eliminar
+const eliminardelCarrito = (id)=>{
+    const productoElegido = mueblesr.find(item => item.id === id);
+    const filteredLibraries = carrito.filter((item) => item !== 'react')
+    console.log("Se agrego elimimo al carrito", carrito);
+}
 
 
 //AGREGAR AL PRODUCTO CADA VE QUE SE SUME UN PRODUCTO
@@ -70,13 +78,54 @@ const actualizarCarrito = ()=>{
     contenidoCarrito.innerHTML = "";
     carrito.forEach(mueble => {
         const div = document.createElement("div");
+        div.classList.add("contenidoCarrito");
         div.innerHTML =
         `
-        <p>${mueble.tipo}</p>
-        <p>${mueble.precio}</p>
-        <p>Precio: ${mueble.tipoMdera}</p>
+        <p class="positioRelative">${mueble.tipo}</p>
+        <p class="positioRelative">Precio: $${mueble.precio}</p>
+        <p class="positioRelative"> Madera: ${mueble.tipoMdera}</p>
         `
 
         contenidoCarrito.appendChild(div);
+
+        let eliminar = document.createElement("span");
+        eliminar.innerHTML= 
+        `
+        <img class= "iconoBasura" src="./assets/img/icono-basura.png" alt="eliminarCarrito">
+        `
+        eliminar.className = "delete-product";
+        eliminar.classList.add("contenidoCarrito");
+        contenidoCarrito.append(eliminar);
+
+        eliminar.addEventListener("click", eliminarProducto);
     })
+}
+
+const eliminarProducto = () =>{
+    const encontrarId = carrito.find((element) => element.id);
+
+    carrito = carrito.filter((carritoId)=> {
+        return carritoId !== encontrarId;
+    });
+    actualizarCarrito();
+
+}
+
+///ORDENAR
+
+function getSelectValue(){
+    document.getElementById("myDropdown").onchange = function() {
+        var seleccion=document.getElementById("myDropdown").value;
+     
+        if(seleccion=="Alfabeticamente"){
+        ordenar();
+        }
+        else if(seleccion=="dos"){
+        }
+        else if(seleccion="tres"){
+        }
+        else{
+        }
+        return false
+     };
 }

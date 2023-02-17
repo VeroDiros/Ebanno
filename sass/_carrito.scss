@@ -11,3 +11,23 @@
     font-size: 17px;
     font-weight: 500;
 }
+
+.contenidoCarrito{
+    display: flex;
+    justify-content: space-between;
+}
+
+.iconoBasura{
+    height: 35px;
+    width: 28px;
+    position: relative;
+}
+
+.positioRelative{
+    position: relative;
+    top: 10px;
+}
+
+.delete-product {
+    cursor: pointer;
+  }
