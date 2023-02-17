@@ -34,7 +34,7 @@
                     <!--Carrito-->
                 </button>
 
-                <!-- Modal -->
+                <!-- Modal Carrito -->
                 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
                     aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
@@ -108,11 +108,11 @@
                 data-bs-toggle="dropdown" aria-expanded="false">
                 Ordenar por:
             </button>
-            <select name="nameDropdown" id="dropdownMenuButton1" class="dropdown-toggle dropdown dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <option value="alfa" class="dropdown-item">Alfabeticamente</option>
-                <option value="mayorP" class="dropdown-item">Mayor precio</option>
-                <option value="menorP" class="dropdown-item">Menor precio</option>
-            </select> 
+            <ul name="nameDropdown" class=" dropdown dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li> <a id="alfa" class="dropdown-item">Alfabeticamente</a></li>
+                <li> <a id="mayorP" class="dropdown-item">Mayor precio</a></li>
+                <li> <a id="menorP" class="dropdown-item">Menor precio</a> </li>
+            </ul> 
         </div>
     </section>
     <!-- SECCION DE PRODUCTOS -->
@@ -156,7 +156,10 @@
         <!-- CONTENEDOR DE LOS PRODUCTOS CON DOM -->
         <section id="contenedorProductos"></section>
 
-
+        <section>
+            <button class="btn btn-primary"id="buttonMasProductos">Mostrar más productos</button>
+            <div id="contenedorJSON"></div>
+        </section>
 
         <!-- JavaScript Bundle with Popper -->
         <script src="./js/productos-DOM.js"></script>
