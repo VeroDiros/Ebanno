@@ -1,0 +1,18 @@
+[
+    {
+        "nombre": "¡Los Oscars alguna vez fueron de madrea!",
+        "img": "../assets/img/oscars.jpg",
+        "contenido": "La madera siempre ha sido valiosa, pero sobre todo durante la Segunda Guerra Mundial. Al menos, para los premiados con el Oscar de aquellos años. La demanda de metales era tan elevada para la industria de armamento con el fin de atender las necesidades bélicas, que hasta las estatuillas doradas se vieron afectadas. De 1939 a 1945 los óscar se fabricaron con madera policromada."
+    },
+    {
+        "nombre": "Cuidado con tocar los árboles",
+        "img": "../assets/img/Arbol-de-la-muerte.jpg",
+        "contenido": "El manzanillo está considerado el árbol más tóxico del mundo. También se le conoce como Manzanilla de la Muerte. Este árbol posee una apariencia de manzano, aunque por suerte vive en América. El fruto de este árbol también se parece a la manzana pero más pequeña, y atrae por su agradable aroma, lo que es aún más peligroso. Su ingesta provoca quemaduras en todo el sistema digestivo llegando a causar la muerte. "
+    },
+    {
+        "nombre": "¿Sabías que el 80% de las compras de muebles y decoración las deciden las mujeres?",
+        "img": "../assets/img/dato3.jpeg",
+        "contenido": "El diseño, el color y elegancia de interiores son una de las fascinaciones de las mujeres."
+    }
+   
+]

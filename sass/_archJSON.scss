@@ -1,0 +1,25 @@
+@import "_variables";
+
+#emoji{
+    height: 20px;
+}
+
+#btnJSON{
+    background-color: $coloCafe;
+    border-color: $coloCafe;
+    margin: 50px;
+    text-align: center;
+    position:relative;
+    left: 600px;
+    width: 300px;
+
+    &:hover{
+        background: $colorNavbar;
+    }
+}
+
+#imagenesDatos{
+    width: 400px;
+    height:200px;
+    margin: 20px;
+}

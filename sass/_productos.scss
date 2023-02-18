@@ -40,6 +40,15 @@
     flex-direction: column;
     gap: 10px;
 
+    h5 {
+        font-size: 25px;
+    }
+
+    h5,
+    p {
+        margin: 10px;
+    }
+
     /*button{
         border: none;
         background: none;

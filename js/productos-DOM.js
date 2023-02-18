@@ -52,7 +52,7 @@ mueblesr.forEach(mueble => {
                 </figure>
                 <div class="info-producto">
                     <h5 class="card-title">${mueble.tipo}</h5>
-                    <p class="card-text">$${mueble.precio}</p>
+                    <p class="card-text">Precio: $${mueble.precio}</p>
                     <button id="agregarCarrito${mueble.id}"> Añadir al carrito </button>
                     
                 </div>
@@ -159,7 +159,7 @@ const ordenarAlfabeticamente = () => {
             </figure>
             <div class="info-producto">
                 <h5 class="card-title">${mueble.tipo}</h5>
-                <p class="card-text">$${mueble.precio}</p>
+                <p class="card-text">Precio: $${mueble.precio}</p>
                 <button id="agregarCarrito${mueble.id}"> Añadir al carrito </button>
                 
             </div>
@@ -210,7 +210,7 @@ const ordenarMayorP = () => {
             </figure>
             <div class="info-producto">
                 <h5 class="card-title">${mueble.tipo}</h5>
-                <p class="card-text">$${mueble.precio}</p>
+                <p class="card-text">Precio: $${mueble.precio}</p>
                 <button id="agregarCarrito${mueble.id}"> Añadir al carrito </button>
                 
             </div>
@@ -266,7 +266,7 @@ const ordenarMenorP = () => {
             </figure>
             <div class="info-producto">
                 <h5 class="card-title">${mueble.tipo}</h5>
-                <p class="card-text">$${mueble.precio}</p>
+                <p class="card-text">Precio: $${mueble.precio}</p>
                 <button id="agregarCarrito${mueble.id}"> Añadir al carrito </button>
                 
             </div>
@@ -293,12 +293,24 @@ DropdownMenorP.addEventListener('click', () => {
     ordenarMenorP();
 })
 
+//SweetAlert
+btnComprar.addEventListener('click', () => {
+    Swal.fire(
+        '¡Felicidades!',
+        'Haz realizado tu compra',
+        'success'
+    )
+    carrito.innerText = "";
+    contenidoCarrito.innerText = "";
+    contadorCarrito.innerText = "";
+    precioTotalC.innerText = `Precio Total: $0`;
+})
 //
 miStorage = window.localStorage;
 console.log(miStorage);
 
 ///
-const botonJSON = document.getElementById("buttonMasProductos");
+/*const botonJSON = document.getElementById("buttonMasProductos");
 
 
 const docJSON = './js/productos.json';
@@ -318,7 +330,7 @@ const llamarJSON = () => {
         </figure>
         <div class="info-producto"> 
             <h5 class="card-title">${producto.nombre}</h5>
-            <p class="card-text">${producto.precio}</p>
+            <p class="card-text">Precio: $${producto.precio}</p>
             <button id="agregarCarrito${producto.id}"> Añadir al carrito </button>
             
         </div>
@@ -326,17 +338,6 @@ const llamarJSON = () => {
     `
         }))
 
-}
+}*/
 
-//SweetAlert
-btnComprar.addEventListener('click', () => {
-    Swal.fire(
-        '¡Felicidades!',
-        'Haz realizado tu compra',
-        'success'
-    )
-    carrito.innerText = "";
-    contenidoCarrito.innerText = "";
-    contadorCarrito.innerText = "";
-    precioTotalC.innerText = `Precio Total: $0`;
-})
+

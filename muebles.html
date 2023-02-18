@@ -103,21 +103,23 @@
             </div>
         </nav>
     </header>
-    <section>
-        <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
-                data-bs-toggle="dropdown" aria-expanded="false">
-                Ordenar por:
-            </button>
-            <ul name="nameDropdown" class=" dropdown dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li> <a id="alfa" class="dropdown-item">Alfabeticamente</a></li>
-                <li> <a id="mayorP" class="dropdown-item">Mayor precio</a></li>
-                <li> <a id="menorP" class="dropdown-item">Menor precio</a> </li>
-            </ul>
-        </div>
-    </section>
-    <!-- SECCION DE PRODUCTOS -->
-    <!-- </section>
+    <main>
+        <h1>Muebles:</h1>
+        <section>
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Ordenar por:
+                </button>
+                <ul name="nameDropdown" class=" dropdown dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li> <a id="alfa" class="dropdown-item">Alfabeticamente</a></li>
+                    <li> <a id="mayorP" class="dropdown-item">Mayor precio</a></li>
+                    <li> <a id="menorP" class="dropdown-item">Menor precio</a> </li>
+                </ul>
+            </div>
+        </section>
+        <!-- SECCION DE PRODUCTOS -->
+        <!-- </section>
     <div class="contenedor-items">
         <div class="item">
             <figure>
@@ -154,14 +156,20 @@
         </div>
     </div>
     <section> -->
-    <!-- CONTENEDOR DE LOS PRODUCTOS CON DOM -->
-    <section id="contenedorProductos"></section>
+        <!-- CONTENEDOR DE LOS PRODUCTOS CON DOM -->
+        <section id="contenedorProductos"></section>
 
-    <section>
-        <button class="btn btn-primary" id="buttonMasProductos">Mostrar más productos</button>
-        <div id="contenedorJSON"></div>
-    </section>
-
+        <!-- <section>
+            <button class="btn btn-primary" id="buttonMasProductos">Mostrar más productos</button>
+            <div id="contenedorJSON"></div>
+        </section> -->
+    </main>
+    <footer class="background-footer">
+        <div>
+          <p></p>
+        </div>
+  
+      </footer>
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./js/productos-DOM.js"></script>

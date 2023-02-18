@@ -10,9 +10,11 @@
     text-align: center;
     font-size: 17px;
     font-weight: 500;
-    margin: 10px;
 }
 
+#contadorCarrito{
+    margin-bottom: 0px;
+}
 .contenidoCarrito {
     display: flex;
     justify-content: space-between;
@@ -38,4 +40,11 @@
 .image-carrito {
     width: 50px;
     height: 50px;
+}
+
+.carrito {
+    align-self: center;
+    width: 45px;
+    height: 40px;
+    padding: 8px;
 }
