@@ -1,9 +1,11 @@
 const contadorCarrito = document.getElementById("contadorCarrito");
 const contenidoCarrito = document.getElementById("contenidoCarrito");
-
+const precioTotalC = document.getElementById("precioTotalC");
+const contador = document.createElement("p");
+const btnComprar = document.getElementById("btnComprar");
 
 const mueblesr = [
-    { id: 1, tipo: 'Comedor', stock: 8, precio: 1500.50, tipoMdera: 'Pino', img: '../assets/img/comedor.jpg', cantidad: 1},
+    { id: 1, tipo: 'Comedor', stock: 8, precio: 1500.50, tipoMdera: 'Pino', img: '../assets/img/comedor.jpg', cantidad: 1 },
     { id: 2, tipo: 'Estantería', stock: 5, precio: 1200.60, tipoMdera: 'Cedro', img: '../assets/img/estanteria.jpg', cantidad: 1 },
     { id: 3, tipo: 'Silla', stock: 10, precio: 500.00, tipoMdera: 'Roble', img: '../assets/img/silla.jpg', cantidad: 1 },
     { id: 4, tipo: 'Closet', stock: 9, precio: 150.50, tipoMdera: 'Caoba', img: '../assets/img/closet.png', cantidad: 1 },
@@ -15,17 +17,24 @@ const mueblesr = [
 
 const carrito = [];
 localStorage.setItem('miCarrito', JSON.stringify(carrito)); //pendiente
-var array = localStorage.getItem('miCarrito');
+/*var array = localStorage.getItem('miCarrito');
 // Se parsea para poder ser usado en js con JSON.parse :)
 array = JSON.parse(array);
-console.log("localStore" + array);
+console.log("localStore" + array);*/
 
 
 //funcion agregar al carrito
 const agregarCarrito = (id, carrito) => {
+    const existeProducto = carrito.some(item => item.id === id);
     const productoElegido = mueblesr.find(item => item.id === id);
-    carrito.push(productoElegido);
-    console.log("Se agrego exitosamente al carrito", carrito);
+    if (existeProducto) {
+        let precioInicial = productoElegido.precio;
+        productoElegido.cantidad++;
+        productoElegido.precio = productoElegido.cantidad * precioInicial;
+    } else {
+        carrito.push(productoElegido);
+        console.log("se agrego al carrito", carrito);
+    }
 }
 
 
@@ -54,7 +63,7 @@ mueblesr.forEach(mueble => {
 
     const btnAgregarCarrito = document.getElementById(`agregarCarrito${mueble.id}`);
     btnAgregarCarrito.addEventListener("click", () => {
-        agregarCarrito(mueble.id, array);
+        agregarCarrito(mueble.id, carrito);
         agregarContadorCarrito();
         actualizarCarrito();
         //eliminardelCarrito(mueble.id, array)
@@ -63,28 +72,25 @@ mueblesr.forEach(mueble => {
 
 contenedorProductos.classList.add("contenedor-items");
 
-//Eliminar
-/*const eliminardelCarrito = (id)=>{
-    const productoElegido = mueblesr.find(item => item.id === id);
-    const filteredLibraries = array.filter((item) => item !== 'react')
-    console.log("Se agrego elimimo al carrito", array);
-}*/
-
-
 //AGREGAR AL PRODUCTO CADA VE QUE SE SUME UN PRODUCTO
 
 
 const agregarContadorCarrito = () => {
-    if (array.length !== 0) {
-        contadorCarrito.classList.add("contadorCarrito");
-        contadorCarrito.textContent = array.length;
+    if (carrito.length !== 0) {
+        contador.classList.add("contadorCarrito");
+        contador.textContent = carrito.length;
+        contadorCarrito.appendChild(contador);
+    } else {
+        contadorCarrito.textContent = "";
+        contadorCarrito.classList.remove("contadorCarrito");
     }
 }
+
 
 //Funcion visualizar carrito
 const actualizarCarrito = () => {
     contenidoCarrito.innerHTML = "";
-    array.forEach(mueble => {
+    carrito.forEach(mueble => {
         const tr = document.createElement("tr");
         tr.classList.add("contenidoCarrito");
         tr.innerHTML =
@@ -95,24 +101,29 @@ const actualizarCarrito = () => {
         <td class="positioRelative">${mueble.tipo}</td>
         <td class="positioRelative"> Cantidad: ${mueble.cantidad}</td>
         <td class="positioRelative">Precio: $${mueble.precio}</td>
-        <span id ="eliminar${mueble.id}" class="delete-product" > <img class= "iconoBasura" src="./assets/img/icono-basura.png" alt="eliminarCarrito${mueble.id}"></span>
+        <td  id ="eliminar${mueble.id}" class="delete-product" > <img  class= "iconoBasura" src="./assets/img/icono-basura.png" alt="eliminarCarrito${mueble.id}"></td>
         `
 
         contenidoCarrito.appendChild(tr);
 
+        const botonEliminar = document.getElementById(`eliminar${mueble.id}`);
+        botonEliminar.addEventListener('click', () => {
+            eliminarProducto(mueble.id);
+        })
+
     })
+    const totalCarrito = carrito.reduce((acumulador, productos) => acumulador + productos.precio, 0);
+    precioTotalC.innerText = `Precio Total: $${totalCarrito}`;
 }
 
 //ELIMINAR
 
-const eliminarProducto = () => {
-    const encontrarId = array.find((element) => element.id === id);
-
-    array = array.filter((carritoId) => {
-        return carritoId !== encontrarId;
-    });
+const eliminarProducto = (productoAEliminar) => {
+    const productoEliminado = carrito.find(mueble => mueble.id === productoAEliminar);
+    const index = carrito.indexOf(productoEliminado);
+    carrito.splice(index, 1);
+    agregarContadorCarrito();
     actualizarCarrito();
-    console.log("Se elimino")
 }
 
 
@@ -160,7 +171,7 @@ const ordenarAlfabeticamente = () => {
 
         const btnAgregarCarrito = document.getElementById(`agregarCarrito${mueble.id}`);
         btnAgregarCarrito.addEventListener("click", () => {
-            agregarCarrito(mueble.id, array);
+            agregarCarrito(mueble.id, carrito);
             agregarContadorCarrito();
             actualizarCarrito();
             //eliminardelCarrito(mueble.id, array);
@@ -211,7 +222,7 @@ const ordenarMayorP = () => {
 
         const btnAgregarCarrito = document.getElementById(`agregarCarrito${mueble.id}`);
         btnAgregarCarrito.addEventListener("click", () => {
-            agregarCarrito(mueble.id, array);
+            agregarCarrito(mueble.id, carrito);
             agregarContadorCarrito();
             actualizarCarrito();
             //eliminardelCarrito(mueble.id, array)
@@ -267,7 +278,7 @@ const ordenarMenorP = () => {
 
         const btnAgregarCarrito = document.getElementById(`agregarCarrito${mueble.id}`);
         btnAgregarCarrito.addEventListener("click", () => {
-            agregarCarrito(mueble.id, array);
+            agregarCarrito(mueble.id, carrito);
             agregarContadorCarrito();
             actualizarCarrito();
             //eliminardelCarrito(mueble.id, array)
@@ -316,3 +327,16 @@ const llamarJSON = () => {
         }))
 
 }
+
+//SweetAlert
+btnComprar.addEventListener('click', () => {
+    Swal.fire(
+        '¡Felicidades!',
+        'Haz realizado tu compra',
+        'success'
+    )
+    carrito.innerText = "";
+    contenidoCarrito.innerText = "";
+    contadorCarrito.innerText = "";
+    precioTotalC.innerText = `Precio Total: $0`;
+})

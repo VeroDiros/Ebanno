@@ -1,39 +1,39 @@
 @import "_variables";
 
-.contenedor-items{
+.contenedor-items {
     display: grid;
     grid-template-columns: repeat(4, 2fr); //repeat(5, 2fr)
     gap: 30px;
     padding-top: 20px;
     padding-left: 60px;
     padding-right: 60px;
-} 
+}
 
-.item{
+.item {
     border-radius: 10px;
     background-color: $colorSecundario;
-    
-    &:hover{
+
+    &:hover {
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
     }
 
-    img{
+    img {
         width: 100%;
         height: 300px;
         object-fit: cover;
         border-radius: 10px 10px 0 0;
 
-        &:hover{
+        &:hover {
             transform: scale(1.2);
         }
     }
 
-    figure{
+    figure {
         overflow: hidden;
     }
 }
 
-.info-producto{
+.info-producto {
     padding: 15px, 30px;
     line-height: 2;
     display: flex;
@@ -50,7 +50,7 @@
     }*/
 }
 
-.precio{
+.precio {
     font-size: 18px;
     font-weight: 900;
 }

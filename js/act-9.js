@@ -81,7 +81,7 @@ const eventoMostrar = () => {
 //n5
 
 
-let funcionTexto =() => {
+let funcionTexto = () => {
     var valueFromStorage = localStorage.getItem("idNombre");
     let texto = document.getElementById("contenidoSaludo");
     texto.innerHTML = 'Bienvenido nuevamente ' + valueFromStorage;
@@ -112,35 +112,35 @@ let funcionBotonLS = () => {
     funcionTexto();
     sectionLS.appendChild(createButton);
     sectionLS.appendChild(createButtonr);
-    
-    
+
+
 }
 
 
-    let createButtonr = document.createElement('div');
-    createButtonr.innerHTML =
-        `
+let createButtonr = document.createElement('div');
+createButtonr.innerHTML =
+    `
 <button id= "botonReiniciar" > Reiniciar </button> 
 `;
 
+sectionLS.appendChild(createButtonr);
+let botonReiniciar = document.getElementById("botonReiniciar");
+
+
+botonReiniciar.addEventListener('click', () => {
+    funcionReiniciar();
+})
+
+let funcionReiniciar = () => {
+    //texto.innerHTML = '';
+    localStorage.clear();
+    console.log(localStorage);
+    funcionTexto();
+    sectionLS.appendChild(createButton);
     sectionLS.appendChild(createButtonr);
-    let botonReiniciar = document.getElementById("botonReiniciar");
 
 
-    botonReiniciar.addEventListener('click', () => {
-        funcionReiniciar();
-    })
-
-    let funcionReiniciar = () => {
-        //texto.innerHTML = '';
-        localStorage.clear();
-        console.log(localStorage);
-        funcionTexto();
-        sectionLS.appendChild(createButton);
-        sectionLS.appendChild(createButtonr);
-        
-
-    }
+}
 
 
 
