@@ -236,13 +236,6 @@ img, svg {
   height: 40px;
   padding: 8px; }
 
-form {
-  background-color: beige;
-  color: #999;
-  padding: 10px;
-  margin: 0 auto;
-  width: 300px; }
-
 .anuncio-orange {
   width: 346px;
   height: 220px;
@@ -322,16 +315,19 @@ form {
   border-radius: 100%;
   text-align: center;
   font-size: 17px;
-  font-weight: 500; }
+  font-weight: 500;
+  margin: 10px; }
 
 .contenidoCarrito {
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  margin: 10px; }
 
 .iconoBasura {
   height: 35px;
   width: 28px;
-  position: relative; }
+  position: relative;
+  top: 7px; }
 
 .positioRelative {
   position: relative;
@@ -339,5 +335,9 @@ form {
 
 .delete-product {
   cursor: pointer; }
+
+.image-carrito {
+  width: 50px;
+  height: 50px; }
 
 /*# sourceMappingURL=style.css.map */
